@@ -1,52 +1,174 @@
-import { getTeams } from "@/lib/teams";
+
+"use client";
+
+import { getTeams, type Team } from "@/lib/teams";
 import { GridCell } from "./grid-cell";
 import Image from "next/image";
+import { useFormState, useFormStatus } from "react-dom";
+import { useEffect, useRef, useState } from "react";
+import { validatePlayerAction, type ValidationState } from "@/app/actions";
+import { useToast } from "@/hooks/use-toast";
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
+import { Loader2, SendHorizonal } from "lucide-react";
+
+type SelectedCell = { row: number; col: number } | null;
+type Guesses = { [key: string]: string };
+
+const initialState: ValidationState = {
+  playedForBothTeams: false,
+  player: null,
+  reason: null,
+};
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <Button type="submit" disabled={pending} className="w-full md:w-auto">
+      {pending ? (
+        <>
+          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+          Checking...
+        </>
+      ) : (
+        <>
+          Guess <SendHorizonal className="ml-2 h-4 w-4" />
+        </>
+      )}
+    </Button>
+  );
+}
 
 export function CrossoverGrid() {
   const { rowTeams, colTeams } = getTeams();
+  const [selectedCell, setSelectedCell] = useState<SelectedCell>({
+    row: 0,
+    col: 0,
+  });
+  const [guesses, setGuesses] = useState<Guesses>({});
+
+  const activeRowTeam = selectedCell ? rowTeams[selectedCell.row] : null;
+  const activeColTeam = selectedCell ? colTeams[selectedCell.col] : null;
+
+  const [state, formAction] = useFormState(
+    validatePlayerAction.bind(
+      null,
+      activeRowTeam?.name ?? "",
+      activeColTeam?.name ?? ""
+    ),
+    initialState
+  );
+
+  const formRef = useRef<HTMLFormElement>(null);
+  const { toast } = useToast();
+
+  useEffect(() => {
+    if (state.reason && !state.playedForBothTeams) {
+      toast({
+        variant: "destructive",
+        title: "Incorrect Guess",
+        description: state.reason,
+      });
+    }
+    if (state.playedForBothTeams && state.player && selectedCell) {
+      const key = `${selectedCell.row}-${selectedCell.col}`;
+      setGuesses((prev) => ({ ...prev, [key]: state.player! }));
+      // Move to next cell
+      if (selectedCell.col < colTeams.length - 1) {
+        setSelectedCell({ row: selectedCell.row, col: selectedCell.col + 1 });
+      } else if (selectedCell.row < rowTeams.length - 1) {
+        setSelectedCell({ row: selectedCell.row + 1, col: 0 });
+      } else {
+        setSelectedCell(null); // All cells filled or last cell
+      }
+    }
+    formRef.current?.reset();
+  }, [state, toast, selectedCell, colTeams.length, rowTeams.length]);
+
+  const handleCellClick = (row: number, col: number) => {
+    setSelectedCell({ row, col });
+  };
 
   return (
-    <div className="grid grid-cols-4 gap-2 md:gap-4 p-2 max-w-4xl mx-auto w-full border border-border rounded-xl shadow-lg bg-card/50">
-      <div />
-      {colTeams.map((team) => (
-        <div
-          key={team.name}
-          className="flex items-center justify-center p-2 rounded-lg aspect-square"
-        >
-          <Image
-            src={team.logoUrl}
-            alt={`${team.name} logo`}
-            width={64}
-            height={64}
-            className="w-12 h-12 md:w-16 md:h-16 object-contain"
-            data-ai-hint={`${team.name} logo`}
-          />
-        </div>
-      ))}
-
-      {rowTeams.flatMap((rowTeam) => [
-        <div
-          key={rowTeam.name}
-          className="flex items-center justify-center p-2 rounded-lg aspect-square"
-        >
-          <Image
-            src={rowTeam.logoUrl}
-            alt={`${rowTeam.name} logo`}
-            width={64}
-            height={64}
-            className="w-12 h-12 md:w-16 md:h-16 object-contain"
-            data-ai-hint={`${rowTeam.name} logo`}
-          />
-        </div>,
-        ...colTeams.map((colTeam) => (
+    <div className="w-full max-w-4xl mx-auto flex flex-col items-center gap-4">
+      <div className="grid grid-cols-4 gap-2 md:gap-4 p-2 w-full border border-border rounded-xl shadow-lg bg-card/50">
+        <div />
+        {colTeams.map((team) => (
           <div
-            key={`${rowTeam.name}-${colTeam.name}`}
-            className="bg-card rounded-lg aspect-square shadow-inner"
+            key={team.name}
+            className="flex flex-col items-center justify-center p-2 rounded-lg aspect-square text-center"
           >
-            <GridCell rowTeam={rowTeam} colTeam={colTeam} />
+            <Image
+              src={team.logoUrl}
+              alt={`${team.name} logo`}
+              width={64}
+              height={64}
+              className="w-12 h-12 md:w-16 md:h-16 object-contain"
+              data-ai-hint={`${team.name} logo`}
+            />
+            <span className="text-xs md:text-sm font-semibold mt-1">{team.label}</span>
           </div>
-        )),
-      ])}
+        ))}
+
+        {rowTeams.flatMap((rowTeam, rowIndex) => [
+          <div
+            key={rowTeam.name}
+            className="flex flex-col items-center justify-center p-2 rounded-lg aspect-square text-center"
+          >
+            <Image
+              src={rowTeam.logoUrl}
+              alt={`${rowTeam.name} logo`}
+              width={64}
+              height={64}
+              className="w-12 h-12 md:w-16 md:h-16 object-contain"
+              data-ai-hint={`${rowTeam.name} logo`}
+            />
+             <span className="text-xs md:text-sm font-semibold mt-1">{rowTeam.label}</span>
+          </div>,
+          ...colTeams.map((colTeam, colIndex) => {
+            const key = `${rowIndex}-${colIndex}`;
+            const isSelected =
+              selectedCell?.row === rowIndex && selectedCell?.col === colIndex;
+            return (
+              <div
+                key={`${rowTeam.name}-${colTeam.name}`}
+                className="bg-card rounded-lg aspect-square shadow-inner"
+                onClick={() => handleCellClick(rowIndex, colIndex)}
+              >
+                <GridCell
+                  rowTeam={rowTeam}
+                  colTeam={colTeam}
+                  player={guesses[key]}
+                  isSelected={isSelected}
+                />
+              </div>
+            );
+          }),
+        ])}
+      </div>
+      {selectedCell !== null && (
+        <form
+          ref={formRef}
+          action={formAction}
+          className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-2 w-full max-w-md"
+        >
+          <Input
+            name="player"
+            placeholder="Enter Player Name..."
+            className="text-center bg-background/50 border-border h-10 text-base flex-grow"
+            autoComplete="off"
+            key={selectedCell ? `${selectedCell.row}-${selectedCell.col}` : "no-cell"}
+            autoFocus
+          />
+          <SubmitButton />
+        </form>
+      )}
+       {guesses && Object.keys(guesses).length === 9 && (
+         <div className="text-center p-4">
+            <h2 className="text-2xl font-bold text-primary">Grid Complete!</h2>
+            <p className="text-muted-foreground">Great job finishing the puzzle.</p>
+         </div>
+       )}
     </div>
   );
 }
