@@ -8,9 +8,13 @@ import { useFormState, useFormStatus } from "react-dom";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { validatePlayerAction, type ValidationState } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
-import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-import { Loader2, SendHorizonal } from "lucide-react";
+import { Loader2, SendHorizonal, Check, ChevronsUpDown } from "lucide-react";
+import { crossoverData } from "@/lib/crossoverData";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "./ui/command";
+import { cn } from "@/lib/utils";
+
 
 type SelectedCell = { row: number; col: number } | null;
 type Guesses = { [key: string]: string };
@@ -60,7 +64,17 @@ export function CrossoverGrid() {
   );
 
   const formRef = useRef<HTMLFormElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
+  
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("");
+
+  const players = useMemo(() => Object.keys(crossoverData["Caballero, Ramiro"]).map(player => ({
+    value: player.toLowerCase(),
+    label: player,
+  })), []);
+
 
   useEffect(() => {
     if (state.reason && !state.playedForBothTeams) {
@@ -73,6 +87,7 @@ export function CrossoverGrid() {
     if (state.playedForBothTeams && state.player && selectedCell) {
       const key = `${selectedCell.row}-${selectedCell.col}`;
       setGuesses((prev) => ({ ...prev, [key]: state.player! }));
+      setValue("");
       // Move to next cell
       if (selectedCell.col < colTeams.length - 1) {
         setSelectedCell({ row: selectedCell.row, col: selectedCell.col + 1 });
@@ -83,11 +98,18 @@ export function CrossoverGrid() {
       }
     }
     formRef.current?.reset();
+    inputRef.current?.focus();
   }, [state, toast, selectedCell, colTeams.length, rowTeams.length]);
 
   const handleCellClick = (row: number, col: number) => {
     setSelectedCell({ row, col });
+    inputRef.current?.focus();
   };
+  
+  const handleFormAction = (formData: FormData) => {
+    formData.set('player', value);
+    formAction(formData);
+  }
 
   return (
     <div className="w-full max-w-4xl mx-auto flex flex-col items-center gap-4">
@@ -149,17 +171,53 @@ export function CrossoverGrid() {
       {selectedCell !== null && (
         <form
           ref={formRef}
-          action={formAction}
+          action={handleFormAction}
           className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-2 w-full max-w-md"
         >
-          <Input
-            name="player"
-            placeholder="Enter Player Name..."
-            className="text-center bg-background/50 border-border h-10 text-base flex-grow"
-            autoComplete="off"
-            key={selectedCell ? `${selectedCell.row}-${selectedCell.col}` : "no-cell"}
-            autoFocus
-          />
+          <input type="hidden" name="player" value={value} />
+           <Popover open={open} onOpenChange={setOpen}>
+            <PopoverTrigger asChild>
+              <Button
+                variant="outline"
+                role="combobox"
+                aria-expanded={open}
+                className="w-full justify-between bg-background/50 border-border h-10 text-base flex-grow"
+              >
+                {value
+                  ? players.find((player) => player.value === value)?.label
+                  : "Select player..."}
+                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-[300px] p-0">
+              <Command>
+                <CommandInput ref={inputRef} placeholder="Search player..." />
+                <CommandEmpty>No player found.</CommandEmpty>
+                <CommandList>
+                <CommandGroup>
+                  {players.map((player) => (
+                    <CommandItem
+                      key={player.value}
+                      value={player.value}
+                      onSelect={(currentValue) => {
+                        setValue(currentValue === value ? "" : currentValue)
+                        setOpen(false)
+                      }}
+                    >
+                      <Check
+                        className={cn(
+                          "mr-2 h-4 w-4",
+                          value === player.value ? "opacity-100" : "opacity-0"
+                        )}
+                      />
+                      {player.label}
+                    </CommandItem>
+                  ))}
+                </CommandGroup>
+                </CommandList>
+              </Command>
+            </PopoverContent>
+          </Popover>
           <SubmitButton />
         </form>
       )}
