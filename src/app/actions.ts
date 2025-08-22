@@ -1,6 +1,7 @@
+
 "use server";
 
-import { validatePlayerForTeams } from "@/ai/flows/validate-player-for-teams";
+import { crossoverData } from "@/lib/crossoverData";
 import { z } from "zod";
 
 export type ValidationState = {
@@ -30,21 +31,43 @@ export async function validatePlayerAction(
   }
 
   const player = validatedFields.data;
+  
+  const playerTeams = crossoverData[player as keyof typeof crossoverData];
 
-  try {
-    const result = await validatePlayerForTeams({ player, team1, team2 });
-
-    return {
-      playedForBothTeams: result.playedForBothTeams,
-      player: result.playedForBothTeams ? player : null,
-      reason: result.reason,
-    };
-  } catch (error) {
-    console.error("Validation Error:", error);
+  if (!playerTeams) {
     return {
       playedForBothTeams: false,
       player: null,
-      reason: "An error occurred during validation. Please try again.",
+      reason: `Player "${player}" not found in our database.`,
+    };
+  }
+
+  const hasTeam1 = playerTeams.includes(team1);
+  const hasTeam2 = playerTeams.includes(team2);
+
+  if (hasTeam1 && hasTeam2) {
+    return {
+      playedForBothTeams: true,
+      player: player,
+      reason: `Correct! ${player} played for both ${team1} and ${team2}.`,
+    };
+  } else if (hasTeam1) {
+     return {
+      playedForBothTeams: false,
+      player: null,
+      reason: `Incorrect. ${player} played for ${team1}, but not ${team2}.`,
+    };
+  } else if (hasTeam2) {
+     return {
+      playedForBothTeams: false,
+      player: null,
+      reason: `Incorrect. ${player} played for ${team2}, but not ${team1}.`,
+    };
+  } else {
+     return {
+      playedForBothTeams: false,
+      player: null,
+      reason: `Incorrect. ${player} did not play for ${team1} or ${team2}.`,
     };
   }
 }

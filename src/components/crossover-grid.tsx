@@ -70,7 +70,7 @@ export function CrossoverGrid() {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
 
-  const players = useMemo(() => Object.keys(crossoverData).map(player => ({
+  const players = useMemo(() => Object.keys(crossoverData).sort().map(player => ({
     value: player.toLowerCase(),
     label: player,
   })), []);
@@ -108,7 +108,15 @@ export function CrossoverGrid() {
   
   const handleFormAction = (formData: FormData) => {
     const playerLabel = players.find(p => p.value === value)?.label;
-    formData.set('player', playerLabel || value);
+    if (!playerLabel) {
+        toast({
+            variant: "destructive",
+            title: "Invalid Player",
+            description: "Please select a player from the list.",
+        });
+        return;
+    }
+    formData.set('player', playerLabel);
     formAction(formData);
   }
 

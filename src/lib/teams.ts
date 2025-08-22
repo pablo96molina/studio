@@ -19,8 +19,9 @@ function getUniqueTeams(): string[] {
 }
 
 
-function selectRandomTeams(teams: string[], count: number): Team[] {
-  const shuffled = [...teams].sort(() => 0.5 - Math.random());
+function selectRandomTeams(teams: string[], count: number, exclude: string[] = []): Team[] {
+  const availableTeams = teams.filter(t => !exclude.includes(t));
+  const shuffled = [...availableTeams].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count).map(teamName => ({
     name: teamName,
     label: teamName,
@@ -33,7 +34,7 @@ const uniqueTeams = getUniqueTeams();
 
 export function getTeams() {
   const rowTeams = selectRandomTeams(uniqueTeams, 3);
-  const colTeams = selectRandomTeams(uniqueTeams.filter(t => !rowTeams.some(rt => rt.name === t)), 3);
+  const colTeams = selectRandomTeams(uniqueTeams, 3, rowTeams.map(t => t.name));
   
   return {
     rowTeams,
