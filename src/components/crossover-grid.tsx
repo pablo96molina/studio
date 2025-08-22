@@ -54,12 +54,14 @@ export function CrossoverGrid() {
   const activeRowTeam = selectedCell ? rowTeams[selectedCell.row] : null;
   const activeColTeam = selectedCell ? colTeams[selectedCell.col] : null;
 
+  const validatePlayerActionWithTeams = validatePlayerAction.bind(
+    null,
+    activeRowTeam?.name ?? '',
+    activeColTeam?.name ?? ''
+  );
+
   const [state, formAction] = useFormState(
-    validatePlayerAction.bind(
-      null,
-      activeRowTeam?.name ?? "",
-      activeColTeam?.name ?? ""
-    ),
+    validatePlayerActionWithTeams,
     initialState
   );
 
@@ -98,7 +100,9 @@ export function CrossoverGrid() {
       }
     }
     formRef.current?.reset();
-    inputRef.current?.focus();
+    if(document.activeElement !== inputRef.current) {
+        inputRef.current?.focus();
+    }
   }, [state, toast, selectedCell, colTeams.length, rowTeams.length]);
 
   const handleCellClick = (row: number, col: number) => {
