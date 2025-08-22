@@ -10,17 +10,9 @@ export type Team = {
 function getUniqueTeams(): string[] {
   const allTeams = new Set<string>();
   for (const player in crossoverData) {
-    const teamsOrPlayers = crossoverData[player as keyof typeof crossoverData];
-    if (Array.isArray(teamsOrPlayers)) {
-      teamsOrPlayers.forEach(team => allTeams.add(team));
-    } else {
-        // This handles the nested object structure seen in the first entry
-        for (const subPlayer in teamsOrPlayers) {
-            const teams = teamsOrPlayers[subPlayer as keyof typeof teamsOrPlayers];
-            if(Array.isArray(teams)) {
-                teams.forEach(team => allTeams.add(team));
-            }
-        }
+    const teams = crossoverData[player as keyof typeof crossoverData];
+    if (Array.isArray(teams)) {
+      teams.forEach(team => allTeams.add(team));
     }
   }
   return Array.from(allTeams);

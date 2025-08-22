@@ -70,7 +70,7 @@ export function CrossoverGrid() {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
 
-  const players = useMemo(() => Object.keys(crossoverData["Caballero, Ramiro"]).map(player => ({
+  const players = useMemo(() => Object.keys(crossoverData).map(player => ({
     value: player.toLowerCase(),
     label: player,
   })), []);
@@ -107,7 +107,8 @@ export function CrossoverGrid() {
   };
   
   const handleFormAction = (formData: FormData) => {
-    formData.set('player', value);
+    const playerLabel = players.find(p => p.value === value)?.label;
+    formData.set('player', playerLabel || value);
     formAction(formData);
   }
 

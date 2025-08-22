@@ -146,26 +146,6 @@ Jugador,Equipo
 "Bertolini, Adrin",Aguada
 "Boscardin, Fabin",Aguada
 "Garcia Morales, Leandro",Aguada
-"Chamorro, Pablo",Albatros
-"Chimanoski, Alvin",Albatros
-"De Armas, Rodrigo",Albatros
-"Etcheverry, Nicolas",Albatros
-"Fajardo, Pablo",Albatros
-"Guerra, Juan",Albatros
-"Jones, Andres",Albatros
-"Marino, Rodrigo",Albatros
-"Martinez, Maximiliano",Albatros
-"Mussio, Maximiliano",Albatros
-"Prego, Francisco",Albatros
-"Vazquez, Carlos",Albatros
-"Zavala, Ignacio",Albatros
-"Abalos, Ramiro",Albatros
-"Cortes, Geronimo",Albatros
-"Diaz, Maximiliano",Albatros
-"Ellis, Nicolas",Albatros
-"Introini, Luis",Albatros
-"Palacios, Fabrizio",Albatros
-"Frutos, Andres",Albatros
 "Cadenasso, Alejandro",Anastasia
 "Catala, Nicolas",Anastasia
 "Crocano, Javier",Anastasia
@@ -290,60 +270,6 @@ Jugador,Equipo
 Bastn Emiliano,Atenas
 "Borges, Ignacio",Atenas
 Brea Gonzalo,Atenas
-"Cabral, Fernando",Ateneo
-"Delgado, Juan",Ateneo
-"Demichelli, Jose",Ateneo
-"Escudero, Juan",Ateneo
-"Fallabrino, Federico",Ateneo
-"Fernandez, Darwin",Ateneo
-"Frutos, Marcelo",Ateneo
-"Garcia, Claudio",Ateneo
-"Ibarra, Nicolas",Ateneo
-"Jubin, Alejandro",Ateneo
-"Lozano, Fernando",Ateneo
-"Mainentti, Mauro",Ateneo
-"Marino, Rodrigo",Ateneo
-"Martinez, Raul",Ateneo
-"Martinez,Tabare",Ateneo
-"Munoz, Sebastian",Ateneo
-"Oholeguy, Matias",Ateneo
-"Olivera, Rodrigo",Ateneo
-"Pacheco, Gustavo",Ateneo
-"Pasqualli, Federico",Ateneo
-"Pau, Julian",Ateneo
-"Pepe, Nicolas",Ateneo
-"Premuda, Fernando",Ateneo
-"Acuna, Milton",Ateneo
-"Acuna, Ramiro",Ateneo
-"Caballero, Ramiro",Auriblanco
-"Carril, Rodrigo",Auriblanco
-"Colman, Camilo",Auriblanco
-"Colman, Richard",Auriblanco
-"Curbelo, Federico",Auriblanco
-"Danglada, Esteban",Auriblanco
-"Ferreira, Guido",Auriblanco
-"Forcade, Ignacio",Auriblanco
-"Frutos, Andres",Auriblanco
-"Gentini, Nicolas",Auriblanco
-"Jones, Andres",Auriblanco
-"Jones, Joaquin",Auriblanco
-"Lorenzo, Matias",Auriblanco
-"Muguiro, Diego",Auriblanco
-"Panelli, Julio",Auriblanco
-"Parodi, Ruben",Auriblanco
-"Pineiro, Andres",Auriblanco
-"ROBAINA, Gabriel",Auriblanco
-"Rivero, Rodrigo",Auriblanco
-"Saldanha, Victor",Auriblanco
-"Seguessa, Federico",Auriblanco
-"Silva, Jonatan",Auriblanco
-"Soria, Guillermo",Auriblanco
-"Suarez, Emiliano",Auriblanco
-"Sanchez, Facundo",Auriblanco
-"Abirad, Alvaro",Auriblanco
-"Bentez, Mauricio",Auriblanco
-"Diaz, Martin",Auriblanco
-"Gastanaga, Felipe",Auriblanco
 "Calfani, Matias",Bigua
 "Cambon, Ignacio",Bigua
 "Carvidon, Rodrigo",Bigua
@@ -520,58 +446,6 @@ Bastn Emiliano,Bigua
 "Gamon, Leandro",Cader
 "Guerra, Matias",Cader
 "Rak, Pablo",Cader
-"Cervieri, Diego",Circulo Sportivo
-"De Pena, Jorge",Circulo Sportivo
-"Giacometti, Renzo",Circulo Sportivo
-"Gonzalez Aguirre, Sebastian",Circulo Sportivo
-"Gonzalez, Diego",Circulo Sportivo
-"Jubin, Alejandro",Circulo Sportivo
-"Luzuriaga, Valentin",Circulo Sportivo
-"Matienzo, Richard",Circulo Sportivo
-"Williams, Anthony",Circulo Sportivo
-"Abratanski, Gabriel",Circulo Sportivo
-"Acuna, Ramiro",Circulo Sportivo
-"Casalas, Diego",Colon
-"Castell, Carlos",Colon
-"Colman, Camilo",Colon
-"Da Nobrega (Magrao), Carlos",Colon
-"De Armas, Rodrigo",Colon
-"Della Mea, Federico",Colon
-"Fernandez, Guido",Colon
-"Ferreira, Ariel",Colon
-"Figueiredo, Carlos",Colon
-"Firpo, Nicolas",Colon
-"Garcia, Nicolas",Colon
-"Godoy, Rodolfo",Colon
-"Gruzdas, Andres",Colon
-"Ibarra, Nicolas",Colon
-"Ibon,Pablo",Colon
-"Lewin, Salomon",Colon
-"Lipatin, Daniel",Colon
-"Lopez, Martin",Colon
-"Lozano, Fernando",Colon
-"Mainentti, Mauro",Colon
-"Mariani, Bruno",Colon
-"Martinez, Ignacio",Colon
-"Munoz, Martin",Colon
-"Polvarini, Luciano",Colon
-"Quinteros, Enrique",Colon
-"Rodriguez, Andres",Colon
-"Romero, Gustavo",Colon
-"Rompani, Bruno",Colon
-"Rosmarino, Nicolas",Colon
-"Salvia, Roberto",Colon
-"Somma, Mauro",Colon
-"Soria, Fernando",Colon
-"Souto, Guillermo",Colon
-"Tissierre, Cristian",Colon
-"Villafane, Nicolas",Colon
-"Zeballos, Leandro",Colon
-"Baltasar, Federico",Colon
-"Bentez, Matas",Colon
-"Botta, Maximiliano",Colon
-"Pintos, Leandro",Colon
-"Rodriguez Freitas, Santiago",Colon
 "Bonda, Javier",Cordon
 "Cawen, Joaquin",Cordon
 "Cervi, Maximiliano",Cordon
@@ -708,19 +582,6 @@ Bastn Emiliano,Bigua
 "Zaballa, Juan Carlos",Defensor Sporting
 "Berta, Javier",Defensor Sporting
 "Bonda, Javier",Defensor Sporting
-"Campora, Federico",Ferro Carril
-"De Los Santos, Gaston",Ferro Carril
-"Espindola, Agustin",Ferro Carril
-"Giano, Emiliano",Ferro Carril
-"Guerra, Emiliano",Ferro Carril
-"Iribarren, Alejandro",Ferro Carril
-"Panelli, Julio",Ferro Carril
-"Pons, Ignacio",Ferro Carril
-"Reymondez, Adrian",Ferro Carril
-"Timote, Hugo",Ferro Carril
-"Trapote, Danny",Ferro Carril
-"Verocay, Maximiliano",Ferro Carril
-"Borges, Ignacio",Ferro Carril
 "Cardozo, Victor",Goes
 "Castro, Joaquin",Goes
 "Charquero, Claudio",Goes
@@ -787,19 +648,6 @@ Bastn Emiliano,Bigua
 "Balbi, William",Goes
 "Baudine, Fernando",Goes
 "Borroni, Andrs",Goes
-"Cambon, Ignacio",Guruyu Waston
-"Cavalli, Gaston",Guruyu Waston
-"Fernandez, Gerardo",Guruyu Waston
-"Garcia, Pablo",Guruyu Waston
-"Guerra, Matias",Guruyu Waston
-"Lopez, Damian",Guruyu Waston
-"Martinez, Sebastian",Guruyu Waston
-"Menendez, Liber",Guruyu Waston
-"Modernell, Juan",Guruyu Waston
-"Muela, Claudio",Guruyu Waston
-"SAAVEDRA, Agustin",Guruyu Waston
-"Timote, Hugo",Guruyu Waston
-"Tissierre, Cristian",Guruyu Waston
 "Dominguez, Mauro",Hebraica Macabi
 "Elhordoy, Enrique",Hebraica Macabi
 "Ferreira, Ariel",Hebraica Macabi
@@ -863,83 +711,6 @@ Bastn Emiliano,Bigua
 "Abraham, David",Hebraica Macabi
 "Bouchatn, Leonardo",Hebraica Macabi
 "Garcia Morales, Leandro",Hebraica Macabi
-"Cabral, Fernando",Independiente
-"Castell, Carlos",Independiente
-"Castro, Martin",Independiente
-"Correa, Matias",Independiente
-"De Rosa, Roque",Independiente
-"Dudoy, Martin",Independiente
-"Ferreira, Ariel",Independiente
-"Gonzalez Aguirre, Sebastian",Independiente
-"Hammer, Friddi",Independiente
-"Horvat, Stefan",Independiente
-"Ibarra, Nicolas",Independiente
-"Jorcin, Leonardo",Independiente
-"Lambert, Eduardo",Independiente
-"Lazzaroni, Renzo",Independiente
-"Luhers, Martin",Independiente
-"Maglione, Claudio",Independiente
-"Marotta, Marcos",Independiente
-"Martinez, Roney",Independiente
-"Olivera, Diego",Independiente
-"Ordono, Fernando",Independiente
-"Pau, Julian",Independiente
-"Ponte, Mauricio",Independiente
-"Rodriguez, Johnny",Independiente
-"Romero, Gustavo",Independiente
-"Suarez, Martin",Independiente
-"Trapote, Danny",Independiente
-"Williams, Anthony",Independiente
-"Zoryez, Sergio",Independiente
-"Acosta, Diego",Independiente
-"Acuna, Ramiro",Independiente
-"Bonello, Gonzalo",Independiente
-"Clerici, Pablo",Independiente
-"Dudoy, Sebastian",Independiente
-"Couto, Agustin",Juventud
-"De Leon, Ignacio",Juventud
-"Delgado, Juan",Juventud
-"Ellis, Ramiro",Juventud
-"Gamon, Leandro",Juventud
-"Garriga, Alvaro",Juventud
-"Narbais, Fabian",Juventud
-"Paez, Gonzalo",Juventud
-"Rodriguez, Alex",Juventud
-"Sgorlo, Anibal",Juventud
-"Shamlian, Daniel",Juventud
-"Sparano, Andres",Juventud
-"Sanchez, Gabriel",Juventud
-"Torres, Joaquin",Juventud
-"Barcelona, Luis",Juventud
-"Chiriazis, Jorge",Juventud
-"Curbelo, Facundo",Juventud
-"Dufrechou, Marcel",Juventud
-"Pereyra, Luis",Juventud
-"Cardozo Grudnicki, Rodrigo",Lagomar
-"Da Rosa, Santiago",Lagomar
-"Delfino, Danilo",Lagomar
-"Elhordoy, Enrique",Lagomar
-"Garcia, Nicolas",Lagomar
-"Gonzalez Espino, Sebastian",Lagomar
-"Laborda, Adrian",Lagomar
-"Lozano, Fernando",Lagomar
-"Machado, Leonardo",Lagomar
-"Oholeguy, Matias",Lagomar
-"Pasqualli, Federico",Lagomar
-"Pessano, Daniel",Lagomar
-"Pintos, Leandro",Lagomar
-"Rodriguez Olivera, Juan Manuel",Lagomar
-"Sgorlo, Anibal",Lagomar
-"Silva, Jonatan",Lagomar
-"Silva, Jorge Tabare",Lagomar
-"Suarez, Mauricio",Lagomar
-"Vazquez, Mike",Lagomar
-"Burgueo, Santiago",Lagomar
-"Taboada, Leandro",Lagomar
-"Fuentes, Santiago",Lagomar
-"Larrea, Gonzalo",Lagomar
-"Martinez, Hernan",Lagomar
-"Ferro, Fernando",Lagomar
 "Camejo, Felipe",Larranaga
 "Campana, Eduardo",Larranaga
 "Caputi, Mateo",Larranaga
@@ -1087,21 +858,6 @@ Bastn Emiliano,Bigua
 "Bouchatn, Leonardo",Larre Borges
 "Bruni, Guillermo",Larre Borges
 "Garcia Morales, Leandro",Larre Borges
-"Carro, Fabian",Las Bovedas
-"Correa, Mauricio",Las Bovedas
-"De Armas, Rodrigo",Las Bovedas
-"Galvan, Gervasio",Las Bovedas
-"Galvan, Victor",Las Bovedas
-"Gonzalez, Ignacio",Las Bovedas
-"Larre, Francisco",Las Bovedas
-"Miramontes, Esteban",Las Bovedas
-"Muniz, Jorge",Las Bovedas
-"Narbais, Fabian",Las Bovedas
-"Oxandabarat, German",Las Bovedas
-"Ramirez, Alvaro",Las Bovedas
-"Romero, Gustavo",Las Bovedas
-"Soria, Guillermo",Las Bovedas
-"Zoryez, Sergio",Las Bovedas
 "Cabrera, Francisco",Malvin
 "Calfani, Matias",Malvin
 "Capalbo, Lucas",Malvin
@@ -1435,18 +1191,6 @@ Bastn Emiliano,Montevideo
 "Bertolini, Adrin",Nacional
 "Bertoni, Valerio",Nacional
 "Blankson, Ryan",Nacional
-"Elicegui, Francisco",Nacional De Fraybentos
-"Abratanski, Gabriel",Nacional De Fraybentos
-"De Leon, Luis",Nacional De Fraybentos
-"Pereira, Cristian",Nacional De Fraybentos
-"Modernell, Juan",Nacional De Fraybentos
-"Nogueira, Alexis",Nacional De Fraybentos
-"Puyol, Ruben",Nacional De Fraybentos
-"Soria, Daniel",Nacional De Fraybentos
-"Acosta, Diego",Nacional De Fraybentos
-"Acuna, Ramiro",Nacional De Fraybentos
-"Larre, Francisco",Nacional De Fraybentos
-"Timote, Hugo",Nacional De Fraybentos
 "Carbajal, Nicolas",Olimpia
 "Carballo, Matias0",Olimpia
 "Cervi, Maximiliano",Olimpia
@@ -1578,251 +1322,6 @@ Bastn Emiliano,Montevideo
 "Venditto, Matias",Olivol Mundial
 "Quinteros, Enrique",Olivol Mundial
 "Varela, Angel",Olivol Mundial
-"Borges, Ignacio",Paysandu
-"Cadenasso, Alejandro",Paysandu
-"Charquero, Claudio",Paysandu
-"Colman, Richard",Paysandu
-"Craig, Brian",Paysandu
-"De Leon, Luis",Paysandu
-"Desirello, Gonzalo",Paysandu
-"Ferreira, Marcelo",Paysandu
-"Garcia, Claudio",Paysandu
-"Gordienko, Juan",Paysandu
-"Grolero, Rodolfo",Paysandu
-"Gutierrez, Fernando",Paysandu
-"Hornos, Augusto",Paysandu
-"Izaguirre, Sebastian",Paysandu
-"Jubin, Alejandro",Paysandu
-"Lambert, Abel",Paysandu
-"Larre, Francisco",Paysandu
-"Lopez, German",Paysandu
-"Marichal, Matias",Paysandu
-"Matienzo, Richard",Paysandu
-"Morales, Pablo",Paysandu
-"Munoz, Sebastian",Paysandu
-"Noe, Santiago",Paysandu
-"Olejnik, Luis",Paysandu
-"Pepe, Nicolas",Paysandu
-"Peralta, Matias",Paysandu
-"Regalado, Juan Martin",Paysandu
-"Reyes, Manuel",Paysandu
-"Reyes, Pablo",Paysandu
-"Till, Andres",Paysandu
-"Till, Daniel",Paysandu
-"Vargas, Gaston",Paysandu
-"Verlo, Ramiro",Paysandu
-"Viera, Pablo",Paysandu
-"Vique,  Esteban",Paysandu
-"Volf, Martin",Paysandu
-"Lasarga, Martin",Paysandu
-"Manzini Magli, Marco",Paysandu
-"Martinez, Horacio",Paysandu
-"Pereyra, Diego",Paysandu
-"Da Nobrega (Magrao), Carlos",Plaza
-"Da Rosa, Santiago",Plaza
-"Elhordoy, Enrique",Plaza
-"Garland, Pablo",Plaza
-"Juan, Nicolas",Plaza
-"Lambert, Eduardo",Plaza
-"Maiochi, Agustin",Plaza
-"Martinez, Osvaldo",Plaza
-"Martinez,Tabare",Plaza
-"Narbais, Fabian",Plaza
-"Nuevo, Raul",Plaza
-"Riveiro, Camilo",Plaza
-"Rodriguez, Alex",Plaza
-"Rostan, Jesus",Plaza
-"Sierra, Hugo",Plaza
-"Soria, Guillermo",Plaza
-"Sanchez, Marcelo",Plaza
-"Trasante, Mauricio",Plaza
-"Triver, Gaston",Plaza
-"Vacca, Leonardo",Plaza
-"Varela, Angel",Plaza
-"Vera, Facundo",Plaza
-"Zoryez, Sergio",Plaza
-"Jennings, Timothy",Plaza De Nueva Helvecia
-"Jones, Michael",Plaza De Nueva Helvecia
-"Casalas, Diego",Plaza De Nueva Helvecia
-"Dominguez, Fabio",Plaza De Nueva Helvecia
-"Gastanaga, Felipe",Plaza De Nueva Helvecia
-"Gutierrez, Fernando",Plaza De Nueva Helvecia
-"Leguizamon, Sebastian",Plaza De Nueva Helvecia
-"Lopez, Eduardo",Plaza De Nueva Helvecia
-"Mendana, Santiago",Plaza De Nueva Helvecia
-"Pau, Julian",Plaza De Nueva Helvecia
-"Abraham, David",Plaza De Nueva Helvecia
-"Greising, Nicolas",Plaza De Nueva Helvecia
-"Haller, Emanuele",Plaza De Nueva Helvecia
-"Lema, Matias",Plaza De Nueva Helvecia
-"Lopez, Martin",Plaza De Nueva Helvecia
-"Munoz, Martin",Plaza De Nueva Helvecia
-"Reymondez, Adrian",Plaza De Nueva Helvecia
-"Saucedo, Jorge",Plaza De Nueva Helvecia
-"Sierra, Fernando",Plaza De Nueva Helvecia
-"Sonderegger, Florian",Plaza De Nueva Helvecia
-"Speranza, Marcelo",Plaza De Nueva Helvecia
-"Tolmero, Leandro",Plaza De Nueva Helvecia
-"Trasante, Mauricio",Plaza De Nueva Helvecia
-"Triver, Gaston",Plaza De Nueva Helvecia
-"Vera, Facundo",Plaza De Nueva Helvecia
-"Souto, Guillermo",Plaza De Nueva Helvecia
-"Cervi, Maximiliano",Praga
-"Charquero, Claudio",Praga
-"Couto, Agustin",Praga
-"Crocano, Javier",Praga
-"Dudoy, Martin",Praga
-"Dudoy, Sebastian",Praga
-"Frontan, Joaquin",Praga
-"Gauna, Carlos",Praga
-"Gentini, Nicolas",Praga
-"Lambert, Eduardo",Praga
-"Lapaz, Hugo",Praga
-"Laubert, Pablo",Praga
-"Olivera, Nicolas",Praga
-"Pintos, Leandro",Praga
-"Saucedo, Jorge",Praga
-"Vera, Diego",Praga
-"Wenzel, Juan",Praga
-"Abratanski, Gabriel",Praga
-"Bertoni, Valerio",Praga
-"Correa, Matias",Racing
-"Gasanol, Matias",Racing
-"Gonzalez, Emiliano",Racing
-"Ibarra, Nicolas",Racing
-"Ibon,Pablo",Racing
-"Martinez, Sebastian",Racing
-"Ordono, Fernando",Racing
-"Perez, Lautaro",Racing
-"Reina, Fabian",Racing
-"Sierra, Hugo",Racing
-"Bertolini, Adrin",Racing
-"Castello, Sergio",Reducto
-"Chittadini, Sebastian",Reducto
-"Demichelli, Jose",Reducto
-"Garay, Martin",Reducto
-"Goyeneche, Mauricio",Reducto
-"Iglesias, Agustin",Reducto
-"Lozano, Fernando",Reducto
-"Marichal, Matias",Reducto
-"Martinez,Tabare",Reducto
-"Mateu, Pedro",Reducto
-"Montemurro, Gustavo",Reducto
-"Monterroso, Ignacio",Reducto
-"Niquichenco, Gustavo",Reducto
-"Paradiso, Mathias",Reducto
-"Pasqualli, Federico",Reducto
-"Pintos, Leandro",Reducto
-"Pons, Ignacio",Reducto
-"Rava, Renzo",Reducto
-"Rodriguez, Mateo",Reducto
-"Rodriguez, Pedro",Reducto
-"Silveira, Diego",Reducto
-"Siniscalchi, Pierino",Reducto
-"Soria, Guillermo",Reducto
-"Villoldo, Sebastian",Reducto
-"Acuna, Diego",Reducto
-"Delfino, Andres",Reducto
-"Hornos, Paul",Reducto
-"Martinez, Rodrigo",Reducto
-"Masaferro, Lucas",Reducto
-"Nunez, Nicolas",Reducto
-"Rodriguez, Andres",Reducto
-"Frutos, Andres",Reducto
-"Godoy, Rodolfo",Reducto
-"Correa, Matias",Remeros
-"Faluotico, Pablo",Remeros
-"Ferreira, Ariel",Remeros
-"Ferreira, Gonzalo",Remeros
-"Gonzalez, Emiliano",Remeros
-"Ibarra, Nicolas",Remeros
-"Laborda, Adrian",Remeros
-"Leguizamon, Sebastian",Remeros
-"Lopez, Martin",Remeros
-"Magnone, Juan Bautista",Remeros
-"Martinez, Oscar",Remeros
-"Rodriguez, Juan Pedro",Remeros
-"Rodriguez, Johnny",Remeros
-"Rodriguez, Ramiro",Remeros
-"Timote, Hugo",Remeros
-"Borges, Ignacio",Remeros
-"Carrabs, Fabricio",Romis Nelimar
-"Casalas, Diego",Romis Nelimar
-"De Leon, Rogelio",Romis Nelimar
-"Gallo Besio, Pablo",Romis Nelimar
-"Gordillo, Nicolas",Romis Nelimar
-"Guerra, Juan",Romis Nelimar
-"Gomez, Juan Ignacio",Romis Nelimar
-"Hornos, Augusto",Romis Nelimar
-"Jennings, Timothy",Romis Nelimar
-"Jones, Michael",Romis Nelimar
-"Lopez, Juan",Romis Nelimar
-"Matoso, Mauricio",Romis Nelimar
-"Miramontes, Esteban",Romis Nelimar
-"Monetti, Maurizio",Romis Nelimar
-"Monroe, Tarrie",Romis Nelimar
-"Monterroso,. Julio",Romis Nelimar
-"Niquichenco, Gerardo",Romis Nelimar
-"Polvarini, Luciano",Romis Nelimar
-"Polvarini, Mauro",Romis Nelimar
-"Rava, Renzo",Romis Nelimar
-"Rodriguez, Johnny",Romis Nelimar
-"Rodriguez, Pedro",Romis Nelimar
-"Rompani, Bruno",Romis Nelimar
-"Ronco, Federico",Romis Nelimar
-"Saldanha, Victor",Romis Nelimar
-"Silva, Hector",Romis Nelimar
-"Siniscalchi, Pierino",Romis Nelimar
-"Sanchez, Facundo",Romis Nelimar
-"Wenzel, Juan",Romis Nelimar
-"Cadenasso, Alejandro",Salto Uruguay
-"Castagnaro, Sebastian",Salto Uruguay
-"Cervieri, Diego",Salto Uruguay
-"Finozzi, Gabriel",Salto Uruguay
-"Giacometti, Mattia",Salto Uruguay
-"Giacometti, Renzo",Salto Uruguay
-"Gonzalez, Diego",Salto Uruguay
-"Gonzalez, Ignacio",Salto Uruguay
-"Laborda, Adrian",Salto Uruguay
-"Lima, Atilio",Salto Uruguay
-"Martinez, Roney",Salto Uruguay
-"Monetti, Maurizio",Salto Uruguay
-"Morales, Pablo",Salto Uruguay
-"Rivera, Juliano",Salto Uruguay
-"Sierra, Hugo",Salto Uruguay
-"Silveira, Juan Pablo",Salto Uruguay
-"Vacca, Leonardo",Salto Uruguay
-"Vietro, Facundo",Salto Uruguay
-"Abratanski, Gabriel",Salto Uruguay
-"Bertolini, Adrin",Salto Uruguay
-"Carro, Fabian",San Telmo
-"Etcheverry, Nicolas",San Telmo
-"Fernandez, Guido",San Telmo
-"Fernandez, Matias",San Telmo
-"Ferreira, Fernando",San Telmo
-"Ferrin, Juan Pablo",San Telmo
-"Gentini, Nicolas",San Telmo
-"Gruzdas, Andres",San Telmo
-"Guerra, Juan",San Telmo
-"Introini, Luis",San Telmo
-"Marchelli, Ricardo",San Telmo
-"Montemurro, German",San Telmo
-"Perez, Ignacio",San Telmo
-"Silva, Gaston",San Telmo
-"Silveira, Diego",San Telmo
-"Souto, Guillermo",San Telmo
-"Zarrillo, Diego",San Telmo
-"Acuna, Milton",San Telmo
-"Balbi, William",San Telmo
-"Galvan, Victor",San Telmo
-"Rey, Agustin",San Telmo
-"Dean, Esteban",San Telmo
-"Goyeneche, Fernando",San Telmo
-"Mayora, Martin",San Telmo
-"Nieves, Josuel",San Telmo
-"Tolmero, Leandro",San Telmo
-"Acosta, Agustin",San Telmo
-"Barcelona, Luis",San Telmo
 "Castro, Sebastian",Sayago
 "Cavalli, Gaston",Sayago
 "Campora, Federico",Sayago
@@ -1891,26 +1390,6 @@ Bastn Emiliano,Montevideo
 "Borsani, Aurelio",Sayago
 "Buffa, Paulo",Sayago
 "Botali, Federico",Sayago
-"Ferreira, Ariel",Soriano
-"Ferreira, Guido",Soriano
-"Frontan, Joaquin",Soriano
-"Ibarra, Nicolas",Soriano
-"Lapaz, Hugo",Soriano
-"Lopez, Martin",Soriano
-"Luhers, Martin",Soriano
-"Martinez, Federico",Soriano
-"Martinez, Horacio",Soriano
-"Martinez, Roney",Soriano
-"Olivera, Nicolas",Soriano
-"Ordono, Fernando",Soriano
-"Paolillo, Federico",Soriano
-"Ponte, Mauricio",Soriano
-"Saucedo, Jorge",Soriano
-"Sosa, Alvaro",Soriano
-"Taboada, Leandro",Soriano
-"Vera, Diego",Soriano
-"Acosta, Diego",Soriano
-"Williams, Anthony",Soriano
 "Cardoney, Rodrigo",Stockolmo
 "Castell, Carlos",Stockolmo
 "Cavalli, Gaston",Stockolmo
@@ -2061,93 +1540,6 @@ Bastn Emiliano,Montevideo
 "Acuna, Ramiro",Tabare
 "Adorian, Ivan",Tabare
 "Medina, Octavio",Tabare
-"Cabrera, Francisco",Touring
-"Cadenasso, Alejandro",Touring
-"Desirello, Gonzalo",Touring
-"Gordienko, Juan",Touring
-"Grolero, Rodolfo",Touring
-"Gutierrez, Fernando",Touring
-"Izaguirre, Sebastian",Touring
-"Munoz, Sebastian",Touring
-"Sosa Rodriguez, Alvaro",Touring
-"Till, Andres",Touring
-"Till, Daniel",Touring
-"Giano, Emiliano",Touring
-"Wenzel, Juan",Trouviille
-"Pancic, Juan",Trouviille
-"Izuibejeres, Joaquin",Trouviille
-"Cabot, Marcos",Trouviille
-"Catala, Nicolas",Trouviille
-"Charquero, Claudio",Trouviille
-"Curbelo, Guillermo",Trouviille
-"Caceres, Hernando",Trouviille
-"Campora, Federico",Trouviille
-"De Armas, Rodrigo",Trouviille
-"De Leon, Rogelio",Trouviille
-"Ducase, Juan",Trouviille
-"Elhordoy, Enrique",Trouviille
-"Elicegui, Francisco",Trouviille
-"Ferres, Andres",Trouviille
-"Folena, Facundo",Trouviille
-"Garbarino, Juan",Trouviille
-"Hernandez, Facundo",Trouviille
-"Hornos, Augusto",Trouviille
-"Izaguirre, Sebastian",Trouviille
-"Izuibejeres, Matias",Trouviille
-"Kanis, Brad",Trouviille
-"Lado, Matias",Trouviille
-"Lopez, Alex",Trouviille
-"Magnone, Juan Bautista",Trouviille
-"Marichal, Matias",Trouviille
-"Marotta, Marcos",Trouviille
-"Martinez Nacere, Diego",Trouviille
-"Martinez, Andres",Trouviille
-"Martinez, Federico",Trouviille
-"Martinez, Gustavo",Trouviille
-"Massa, Santiago",Trouviille
-"Mayora, Juan Manuel",Trouviille
-"Mayora, Martin",Trouviille
-"Mendez, Maximiliano",Trouviille
-"Monteverde, Felipe",Trouviille
-"Monteverde, Manuel",Trouviille
-"Morales, Pablo",Trouviille
-"Morencos, Ignacio",Trouviille
-"Niquichenco, Gerardo",Trouviille
-"Penna, Martin",Trouviille
-"Pepe, Nicolas",Trouviille
-"Pineiro, Joaquin",Trouviille
-"Pintos, Leandro",Trouviille
-"Pita, Hernan",Trouviille
-"Posada, Enrique",Trouviille
-"Perez, Alejandro",Trouviille
-"Perez, Marcelo",Trouviille
-"Rak, Pablo",Trouviille
-"Reymondez, Adrian",Trouviille
-"Riera, Rodrigo",Trouviille
-"Rivera, Juliano",Trouviille
-"Rivero, Daniel",Trouviille
-"Shaw, Sebastian",Trouviille
-"Silveira, Juan Pablo",Trouviille
-"Suarez, Martin",Trouviille
-"Trapote, Danny",Trouviille
-"Trasante, Mauricio",Trouviille
-"Triver, Gaston",Trouviille
-"Varini, Federico",Trouviille
-"Vidal, Santiago",Trouviille
-"Viera, Pablo",Trouviille
-"Vispo, Juan Jose",Trouviille
-"Williams, Anthony",Trouviille
-"Zavala, Santiago",Trouviille
-"Abratanski, Gabriel",Trouviille
-"Acosta, Alejandro",Trouviille
-"Acuna, Ramiro",Trouviille
-"Aguilera, Martin",Trouviille
-"Barriola, Miguel",Trouviille
-"Bascou , Claudio",Trouviille
-Bastn Emiliano,Trouviille
-"Borges, Ignacio",Trouviille
-"Bruni, Guillermo",Trouviille
-"Leon, Santiago",Trouviille
 "Clerici, Pablo",Union Atletica
 "Cieslinkas, Nicolas",Union Atletica
 "Vacca, Leonardo",Union Atletica
@@ -2215,85 +1607,6 @@ Bastn Emiliano,Trouviille
 "Varela, Angel",Union Atletica
 "Varela, Emiliano",Union Atletica
 "Varela, German",Union Atletica
-"Fernandez Brasil, Jose",Urunday Uinversitario
-"Carvidon, Rodrigo",Urunday Uinversitario
-"De Leon, Rogelio",Urunday Uinversitario
-"Silva, Brian",Urunday Uinversitario
-"Castell, Carlos",Urunday Uinversitario
-"Castillo, Facundo",Urunday Uinversitario
-"Coito, Juan Martin",Urunday Uinversitario
-"Craig, Brian",Urunday Uinversitario
-"Crocano, Javier",Urunday Uinversitario
-"Ellis, Mauricio",Urunday Uinversitario
-"FAROPPA, Angel",Urunday Uinversitario
-"Fallabrino, Federico",Urunday Uinversitario
-"Faluotico, Pablo",Urunday Uinversitario
-"Fernandez, Darwin",Urunday Uinversitario
-"Fernandez, Juan",Urunday Uinversitario
-"Ferreira, Guido",Urunday Uinversitario
-"Fontes, Agustin",Urunday Uinversitario
-"Frigio, Mariano",Urunday Uinversitario
-"Galego, Nahuel",Urunday Uinversitario
-"Garbarino, Juan",Urunday Uinversitario
-"Gonzalvo, Gonzalo",Urunday Uinversitario
-"Iglesias, Agustin",Urunday Uinversitario
-"Juan, Nicolas",Urunday Uinversitario
-"Lambert, Eduardo",Urunday Uinversitario
-"Lasarga, Martin",Urunday Uinversitario
-"Leguizamon, Sebastian",Urunday Uinversitario
-"Machado, Santiago",Urunday Uinversitario
-"Manicera, Marcelo",Urunday Uinversitario
-"Martinez, Agustin",Urunday Uinversitario
-"Martinez, Ignacio",Urunday Uinversitario
-"Martinez, Federico",Urunday Uinversitario
-"Martinez, Osvaldo",Urunday Uinversitario
-"Masaferro, Gaston",Urunday Uinversitario
-"Miller, Federico",Urunday Uinversitario
-"Morales, Pablo",Urunday Uinversitario
-"Munoz, Sebastian",Urunday Uinversitario
-"Nathan, Guillermo",Urunday Uinversitario
-"Niquichenco, Gerardo",Urunday Uinversitario
-"Olivera, Rodrigo",Urunday Uinversitario
-"Otonello, Marcos",Urunday Uinversitario
-"Panelli, Julio",Urunday Uinversitario
-"Prego, Francisco",Urunday Uinversitario
-"Perez, Diego",Urunday Uinversitario
-"Rafaelli, Daniel",Urunday Uinversitario
-"Rava, Renzo",Urunday Uinversitario
-"Rivas, Gonzalo",Urunday Uinversitario
-"Saldanha, Victor",Urunday Uinversitario
-"Silvarrey, German",Urunday Uinversitario
-"Suarez, Mateo",Urunday Uinversitario
-"Sanchez, Facundo",Urunday Uinversitario
-"Sanchez, Marcelo",Urunday Uinversitario
-"Taboada, Leandro",Urunday Uinversitario
-"Terra, Facundo",Urunday Uinversitario
-"Texeira, Diego",Urunday Uinversitario
-"Timote, Hugo",Urunday Uinversitario
-"Tortajada, Diego",Urunday Uinversitario
-"Trindade,  Jorge",Urunday Uinversitario
-"Varela, Angel",Urunday Uinversitario
-"Villoldo, Sebastian",Urunday Uinversitario
-"Zaballa, Juan Carlos",Urunday Uinversitario
-"Zubiaurre, Mario",Urunday Uinversitario
-"Banquerque, Sebastin",Urunday Uinversitario
-"Barrios, Matas",Urunday Uinversitario
-"Borsellino, Nicols",Urunday Uinversitario
-"Barrios, Gabriel",Urunday Uinversitario
-"Caballero, Ramiro",Urupan
-"Chittadini, Sebastian",Urupan
-"Diaz Grecco, Nicolas",Urupan
-"Gabin, Andres",Urupan
-"Galvan, Victor",Urupan
-"Ghans, Alvaro",Urupan
-"Lambert, Abel",Urupan
-"Lotitto, Leonardo",Urupan
-"Munoz, Martin",Urupan
-"Pereira, Pablo",Urupan
-"Vique,  Esteban",Urupan
-"Volf, Martin",Urupan
-"Zaballa, Juan Carlos",Urupan
-"Perez, Mateo",Urunday Uinversitario
 "Caballero, Ramiro",Verdirrojo
 "Calone, Nicolas",Verdirrojo
 "Cervi, Maximiliano",Verdirrojo
@@ -2360,33 +1673,6 @@ Bastn Emiliano,Verdirrojo
 "Blanco, Andrs",Verdirrojo
 "Borroni, Andrs",Verdirrojo
 "Borteiro, Sebastian",Verdirrojo
-"Castell, Carlos",Waston
-"Craig, Brian",Waston
-"Curbelo, Federico",Waston
-"De Pena, Jorge",Waston
-"Gentini, Nicolas",Waston
-"Gonzalez, Ignacio",Waston
-"Lespada, Diego",Waston
-"Luhers, Martin",Waston
-"Lopez, Rodrigo",Waston
-"Manicera, Marcelo",Waston
-"Marichal, Matias",Waston
-"Mateu, Pedro",Waston
-"Pastrana, Ciro",Waston
-"Pintos, Leandro",Waston
-"Pons, Ignacio",Waston
-"Perez, Rodrigo",Waston
-"Quijano, Gonzalo",Waston
-"Ramirez, Alvaro",Waston
-"Rostan, Jesus",Waston
-"Sierra, Fernando",Waston
-"Zoryez, Sergio",Waston
-"Abirad, Alvaro",Waston
-"Acosta, Alejandro",Waston
-"Balbi, William",Waston
-"Barriola, Miguel",Waston
-Bastn Emiliano,Waston
-"Benelli, Marcelo",Waston
 "Cabrera, Francisco",Welcome
 "Carvidon, Rodrigo",Welcome
 "Charquero, Claudio",Welcome
