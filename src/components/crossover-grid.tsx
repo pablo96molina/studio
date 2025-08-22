@@ -5,7 +5,7 @@ import { getTeams, type Team } from "@/lib/teams";
 import { GridCell } from "./grid-cell";
 import Image from "next/image";
 import { useFormState, useFormStatus } from "react-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { validatePlayerAction, type ValidationState } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
 import { Input } from "./ui/input";
@@ -40,7 +40,7 @@ function SubmitButton() {
 }
 
 export function CrossoverGrid() {
-  const { rowTeams, colTeams } = getTeams();
+  const { rowTeams, colTeams } = useMemo(() => getTeams(), []);
   const [selectedCell, setSelectedCell] = useState<SelectedCell>({
     row: 0,
     col: 0,
