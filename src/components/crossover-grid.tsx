@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 
 
 type SelectedCell = { row: number; col: number } | null;
-type Guesses = { [key: string]: string };
+type Guesses = { [key: string]: string | null };
 
 const initialState: ValidationState = {
   playedForBothTeams: false,
@@ -88,7 +88,7 @@ export function CrossoverGrid() {
     }
     if (state.playedForBothTeams && state.player && selectedCell) {
       const key = `${selectedCell.row}-${selectedCell.col}`;
-      setGuesses((prev) => ({ ...prev, [key]: state.player! }));
+      setGuesses((prev) => ({ ...prev, [key]: state.player }));
       setValue("");
       // Move to next cell
       if (selectedCell.col < colTeams.length - 1) {
@@ -100,10 +100,8 @@ export function CrossoverGrid() {
       }
     }
     formRef.current?.reset();
-    if(document.activeElement !== inputRef.current) {
-        inputRef.current?.focus();
-    }
-  }, [state, toast, selectedCell, colTeams.length, rowTeams.length]);
+    inputRef.current?.focus();
+  }, [state]);
 
   const handleCellClick = (row: number, col: number) => {
     setSelectedCell({ row, col });
@@ -164,6 +162,7 @@ export function CrossoverGrid() {
             const key = `${rowIndex}-${colIndex}`;
             const isSelected =
               selectedCell?.row === rowIndex && selectedCell?.col === colIndex;
+            const player = guesses[key];
             return (
               <div
                 key={`${rowTeam.name}-${colTeam.name}`}
@@ -173,7 +172,7 @@ export function CrossoverGrid() {
                 <GridCell
                   rowTeam={rowTeam}
                   colTeam={colTeam}
-                  player={guesses[key]}
+                  player={player ?? undefined}
                   isSelected={isSelected}
                 />
               </div>
