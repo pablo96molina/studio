@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Fútbol Grid',
-  description: 'A 3x3 daily football trivia grid game.',
+  title: '3x3',
+  description: 'Un 3x3 diario de jugadores uruguayos.',
 };
 
 export default function RootLayout({
