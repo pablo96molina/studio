@@ -1,8 +1,11 @@
 import { CrossoverGrid } from "@/components/crossover-grid";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { getTeams } from "@/lib/teams";
 
 export default function Home() {
+  const { rowTeams, colTeams } = getTeams();
+
   return (
     <main className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center p-4 relative">
       <nav className="absolute top-4 right-4 flex gap-2">
@@ -21,7 +24,7 @@ export default function Home() {
           Challenge your football knowledge. For each cell, guess a player who has played for both intersecting teams.
         </p>
       </div>
-      <CrossoverGrid />
+      <CrossoverGrid rowTeams={rowTeams} colTeams={colTeams} />
     </main>
   );
 }

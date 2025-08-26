@@ -4,7 +4,7 @@
 import { getTeams, type Team } from "@/lib/teams";
 import { GridCell } from "./grid-cell";
 import Image from "next/image";
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState, useFormStatus } from "react-dom";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { validatePlayerAction, type ValidationState } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
@@ -14,6 +14,7 @@ import { crossoverData } from "@/lib/crossoverData";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "./ui/command";
 import { cn } from "@/lib/utils";
+import { type Team } from "@/lib/teams";
 
 
 type SelectedCell = { row: number; col: number } | null;
@@ -43,8 +44,12 @@ function SubmitButton() {
   );
 }
 
-export function CrossoverGrid() {
-  const { rowTeams, colTeams } = useMemo(() => getTeams(), []);
+interface CrossoverGridProps {
+  rowTeams: Team[];
+  colTeams: Team[];
+}
+
+export function CrossoverGrid({ rowTeams, colTeams }: CrossoverGridProps) {
   const [selectedCell, setSelectedCell] = useState<SelectedCell>({
     row: 0,
     col: 0,
@@ -60,7 +65,7 @@ export function CrossoverGrid() {
     activeColTeam?.name ?? ''
   );
 
-  const [state, formAction] = useFormState(
+  const [state, formAction] = useActionState(
     validatePlayerActionWithTeams,
     initialState
   );
