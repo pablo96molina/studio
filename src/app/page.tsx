@@ -18,10 +18,10 @@ export default function Home() {
       </nav>
       <div className="text-center mb-8">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-2 font-headline bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-          Fútbol Grid
+          3x3
         </h1>
         <p className="text-center text-muted-foreground max-w-md mx-auto">
-          Challenge your football knowledge. For each cell, guess a player who has played for both intersecting teams.
+          Expliqueme esto Peinado!
         </p>
       </div>
       <CrossoverGrid rowTeams={rowTeams} colTeams={colTeams} />
