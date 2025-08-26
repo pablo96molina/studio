@@ -4,7 +4,8 @@
 import { getTeams, type Team } from "@/lib/teams";
 import { GridCell } from "./grid-cell";
 import Image from "next/image";
-import { useActionState, useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
+import { useActionState } from "react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { validatePlayerAction, type ValidationState } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
@@ -14,7 +15,6 @@ import { crossoverData } from "@/lib/crossoverData";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "./ui/command";
 import { cn } from "@/lib/utils";
-import { type Team } from "@/lib/teams";
 
 
 type SelectedCell = { row: number; col: number } | null;
@@ -50,10 +50,10 @@ interface CrossoverGridProps {
 }
 
 export function CrossoverGrid({ rowTeams, colTeams }: CrossoverGridProps) {
-  const [selectedCell, setSelectedCell] = useState<SelectedCell>({
-    row: 0,
-    col: 0,
-  });
+  const [selectedCell, setSelectedCell] = useState<SelectedCell>(
+    rowTeams.length > 0 && colTeams.length > 0 ? { row: 0, col: 0 } : null
+  );
+
   const [guesses, setGuesses] = useState<Guesses>({});
 
   const activeRowTeam = selectedCell ? rowTeams[selectedCell.row] : null;
@@ -82,6 +82,19 @@ export function CrossoverGrid({ rowTeams, colTeams }: CrossoverGridProps) {
     label: player,
   })), []);
 
+  // Handle case where no teams are available
+  if (rowTeams.length === 0 || colTeams.length === 0) {
+    return (
+      <div className="w-full max-w-4xl mx-auto flex flex-col items-center gap-4">
+        <div className="text-center p-8">
+          <h2 className="text-2xl font-bold text-destructive mb-2">Unable to Load Grid</h2>
+          <p className="text-muted-foreground">
+            Could not generate a valid crossover grid. Please try refreshing the page.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   useEffect(() => {
     if (state.reason && !state.playedForBothTeams) {
@@ -125,7 +138,7 @@ export function CrossoverGrid({ rowTeams, colTeams }: CrossoverGridProps) {
     }
     formData.set('player', playerLabel);
     formAction(formData);
-  }
+  };
 
   return (
     <div className="w-full max-w-4xl mx-auto flex flex-col items-center gap-4">
@@ -217,8 +230,8 @@ export function CrossoverGrid({ rowTeams, colTeams }: CrossoverGridProps) {
                       key={player.value}
                       value={player.value}
                       onSelect={(currentValue) => {
-                        setValue(currentValue === value ? "" : currentValue)
-                        setOpen(false)
+                        setValue(currentValue === value ? "" : currentValue);
+                        setOpen(false);
                       }}
                     >
                       <Check
