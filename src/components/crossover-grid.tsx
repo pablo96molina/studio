@@ -44,12 +44,16 @@ function SubmitButton() {
   );
 }
 
-interface CrossoverGridProps {
-  rowTeams: Team[];
-  colTeams: Team[];
-}
+export function CrossoverGrid() {
+  const [rowTeams, setRowTeams] = useState<Team[]>([]);
+  const [colTeams, setColTeams] = useState<Team[]>([]);
 
-export function CrossoverGrid({ rowTeams, colTeams }: CrossoverGridProps) {
+  useEffect(() => {
+    const { rowTeams: newRowTeams, colTeams: newColTeams } = getTeams();
+    setRowTeams(newRowTeams);
+    setColTeams(newColTeams);
+  }, []);
+
   const [selectedCell, setSelectedCell] = useState<SelectedCell>(
     rowTeams.length > 0 && colTeams.length > 0 ? { row: 0, col: 0 } : null
   );
