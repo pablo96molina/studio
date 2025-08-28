@@ -47,18 +47,20 @@ function SubmitButton() {
 export function CrossoverGrid() {
   const [rowTeams, setRowTeams] = useState<Team[]>([]);
   const [colTeams, setColTeams] = useState<Team[]>([]);
+  const [selectedCell, setSelectedCell] = useState<SelectedCell>(null);
+  const [guesses, setGuesses] = useState<Guesses>({});
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("");
 
   useEffect(() => {
     const { rowTeams: newRowTeams, colTeams: newColTeams } = getTeams();
     setRowTeams(newRowTeams);
     setColTeams(newColTeams);
+    // Set initial selected cell after teams are loaded
+    if (newRowTeams.length > 0 && newColTeams.length > 0) {
+      setSelectedCell({ row: 0, col: 0 });
+    }
   }, []);
-
-  const [selectedCell, setSelectedCell] = useState<SelectedCell>(
-    rowTeams.length > 0 && colTeams.length > 0 ? { row: 0, col: 0 } : null
-  );
-
-  const [guesses, setGuesses] = useState<Guesses>({});
 
   const activeRowTeam = selectedCell ? rowTeams[selectedCell.row] : null;
   const activeColTeam = selectedCell ? colTeams[selectedCell.col] : null;
@@ -77,28 +79,11 @@ export function CrossoverGrid() {
   const formRef = useRef<HTMLFormElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
-  
-  const [open, setOpen] = useState(false);
-  const [value, setValue] = useState("");
 
   const players = useMemo(() => Object.keys(crossoverData).sort().map(player => ({
     value: player.toLowerCase(),
     label: player,
   })), []);
-
-  // Handle case where no teams are available
-  if (rowTeams.length === 0 || colTeams.length === 0) {
-    return (
-      <div className="w-full max-w-4xl mx-auto flex flex-col items-center gap-4">
-        <div className="text-center p-8">
-          <h2 className="text-2xl font-bold text-destructive mb-2">Unable to Load Grid</h2>
-          <p className="text-muted-foreground">
-            Could not generate a valid crossover grid. Please try refreshing the page.
-          </p>
-        </div>
-      </div>
-    );
-  }
 
   useEffect(() => {
     if (state.reason && !state.playedForBothTeams) {
@@ -143,6 +128,20 @@ export function CrossoverGrid() {
     formData.set('player', playerLabel);
     formAction(formData);
   };
+
+  // Handle case where no teams are available
+  if (rowTeams.length === 0 || colTeams.length === 0) {
+    return (
+      <div className="w-full max-w-4xl mx-auto flex flex-col items-center gap-4">
+        <div className="text-center p-8">
+          <h2 className="text-2xl font-bold text-destructive mb-2">Unable to Load Grid</h2>
+          <p className="text-muted-foreground">
+            Could not generate a valid crossover grid. Please try refreshing the page.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full max-w-4xl mx-auto flex flex-col items-center gap-4">
